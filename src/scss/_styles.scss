@@ -1,0 +1,137 @@
+.hero{
+    color: white;
+    width: 100%;
+    height: 645px;
+    position: relative;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+    padding: 40px 0;
+}
+
+.home{
+    background: $dark-color url(../images/Hero-Pattern.png) repeat;
+    background-attachment: fixed;
+}
+
+.header{
+    align-items: center;
+}
+
+.main-nav ul{
+    margin: 0;
+    padding: 0;
+
+    li{
+        display: inline-block;
+        list-style: none;
+        padding: 0 1.25em;
+
+        a{
+            font-size: 1.25em;
+            text-decoration: none;
+            color: white;
+            transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: scale(0.85);
+            letter-spacing: 0.04em;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+            font-weight: 400;
+
+            &:hover{
+                transform: scale(1);
+            }
+        }
+
+        &.current-menu-item a{
+            font-weight: 800;
+            border-bottom: 2px solid white;
+            transform: scale(1);
+        }
+    }
+}
+
+.feat-text h1{
+    padding: 100px 0;
+    font-weight: 500;
+    max-width: 700px;
+}
+
+.portfolio-items{
+    margin-top: -160px;
+
+    .portfolio-item{
+        height: 450px;
+        position: relative;
+        display: flex;
+        margin: 0 0 50px;
+        justify-content: center;
+    }
+
+    .portfolio-item-container{
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 400ms ease-in-out;
+        box-shadow: 0 10px 25px rgba(0,0,0, 0.3);
+
+        header{
+            color: white;
+            text-align: center;
+            transition: all 550ms ease-in-out;
+            transform: translateY(-100px);
+            will-change: transform;
+
+            h3{margin-bottom: 0;font-family: 'Overpass', sans-serif;font-weight: 700;}
+            p{font-weight: 300;}
+        }
+
+        section{
+            transition: all 450ms ease-in-out;
+            transform: translateY(-70px);
+            will-change: transform;
+
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &:hover{
+            box-shadow: 0 0 6px rgba(0,0,0, 0.6);
+
+            header{
+                transform: translateY(20px);
+            }
+            section{
+                transform: translateY(-30px);
+            }
+        }
+    }
+
+    .facultyCommons{
+        background: #367AB8;
+    }
+    .teachingGuide{
+        background: #F4806B;
+    }
+    .bridges{
+        background: #40A5C1;
+    }
+    .bmi{
+        background: #737373;
+    }
+    .ego{
+        background: #252525;
+    }
+    .embelSociety{
+        background: #0C6273;
+    }
+    .facadeLabs{
+        background: #657687;
+    }
+}
+
+@media screen and (max-width: $size-sm) {
+    .feat-text h1{
+        font-size: 2.2em;
+    }
+}
